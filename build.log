@@ -1,2 +1,0 @@
-Messages from application of C:\Users\msalo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\pretext\static\xsl\pretext-html.xsl:
-MBX:WARNING:    Your <article> does not have any sections or worksheets, nor any top-level paragraphs.  Maybe you forgot the '--xinclude' switch on your 'xsltproc' command line?
