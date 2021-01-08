@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-08T01:54:58-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">That \(P\Rightarrow Q\) is equivalent to \((\lnot P)\vee Q\) can be proven with a truth table:</p>
+<figure class="table table-like"><figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.4<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">\(P​\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(\lnot P​\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(Q​\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\((\lnot P)\vee Q​\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+</table></figure><p xmlns:svg="http://www.w3.org/2000/svg">(Note that the rightmost column of this table, the truth values of \((\lnot P)\vee Q\text{,}\) are all the same as the truth values in the definition of \(P\Rightarrow Q\text{.}\))</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">To prove the negation formula, we can use the above along with <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lnot\bigl( P\Rightarrow Q\bigr) &amp;\equiv \lnot\bigl( (\lnot P) \vee Q \bigr) &amp;&amp; \text{using the equivalence above}\\
+&amp;\equiv \lnot(\lnot P) \wedge (\lnot Q) &amp;&amp; \text{by De Morgan's Laws}\\
+&amp;\equiv P \wedge (\lnot Q).
+\end{align*}
+</div></article><span class="incontext"><a href="sec-proofs.html#proof-1">in-context</a></span>
+</body>
+</html>

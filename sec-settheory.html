@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-04T23:36:28-05:00       *-->
+<!--*       on 2021-01-08T01:54:58-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -81,10 +81,24 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="contents.html" data-scroll="contents"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="sec-proofs.html" data-scroll="sec-proofs"><span class="codenumber">1</span> <span class="title">Proof Techniques</span></a></li>
-<li class="link active"><a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a></li>
-<li class="link"><a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a></li>
-<li class="link"><a href="sec-limits.html" data-scroll="sec-limits"><span class="codenumber">4</span> <span class="title">Limits and Sequences</span></a></li>
+<li class="link">
+<a href="sec-proofs.html" data-scroll="sec-proofs"><span class="codenumber">1</span> <span class="title">Proof Techniques</span></a><ul>
+<li><a href="sec-proofs.html#ss_conditional" data-scroll="ss_conditional">Conditional Logic</a></li>
+<li><a href="sec-proofs.html#ss_quantified" data-scroll="ss_quantified">Quantified Logic</a></li>
+<li><a href="sec-proofs.html#ss_proof" data-scroll="ss_proof">Proof Strategies</a></li>
+<li><a href="sec-proofs.html#ws-proofs" data-scroll="ws-proofs">Proof Technique Workbook</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a><ul><li><a href="sec-settheory.html#ws-settheory" data-scroll="ws-settheory">Set Theory Workbook</a></li></ul>
+</li>
+<li class="link">
+<a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul><li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li></ul>
+</li>
+<li class="link">
+<a href="sec-limits.html" data-scroll="sec-limits"><span class="codenumber">4</span> <span class="title">Limits and Sequences</span></a><ul><li><a href="sec-limits.html#ws-limits" data-scroll="ws-limits">Limits and Sequences Workbook</a></li></ul>
+</li>
+<li class="link"><a href="sec-definitions.html" data-scroll="sec-definitions"><span class="codenumber">A</span> <span class="title">Definitions for this Workbook</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-settheory"><h2 class="heading hide-type">
@@ -93,24 +107,27 @@ MathJax.Hub.Config({
 <section class="worksheet" id="ws-settheory"><h3 class="heading hide-type">
 <span class="type">Worksheet</span> <span class="codenumber">2.1</span> <span class="title">Set Theory Workbook</span>
 </h3>
-<p id="p-19"><em class="emphasis">In #1-3, sketch and shade a Venn diagram that represents the indicated set operation.</em></p>
+<p id="p-87"><em class="emphasis">In #1-3, sketch and shade a Venn diagram that represents the indicated set operation.</em></p>
 <article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-20">For two sets \(A\) and \(B\text{,}\) the set \(A^C \cup B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-21">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cup C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-22">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cap C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-23">Let \(A\) and \(B\) be sets. Prove that if \(A\cup B = \emptyset\text{,}\) then \(A=\emptyset\) and \(B=\emptyset\text{.}\)</p>
+<p id="p-88">For two sets \(A\) and \(B\text{,}\) the set \(A^C \cup B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-89">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cup C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-90">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cap C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-91">Let \(A\) and \(B\) be sets. Prove that if \(A\cup B = \emptyset\text{,}\) then \(A=\emptyset\) and \(B=\emptyset\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-24">Try a proof by contrapositive.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-92">Try a proof by contrapositive.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-25">Use an element argument to prove DeMorgan's Laws.</p></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-26">What is the cardinality of each of the following sets?</p>
+<p id="p-93">Use an element argument to prove <a class="xref" data-knowl="./knowl/thm_demorgan_sets.html" title="Corollary A.7: De Morgan's Laws for Sets">DeMorgan's Laws for Sets</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-94">Apply the logical version of <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-95">What is the cardinality of each of the following sets?</p>
 <ol class="lower-alpha">
-<li id="li-1"><p id="p-27">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
-<li id="li-2"><p id="p-28">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
-<li id="li-3"><p id="p-29">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
-<li id="li-4"><p id="p-30">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
+<li id="li-21"><p id="p-96">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
+<li id="li-22"><p id="p-97">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
+<li id="li-23"><p id="p-98">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
+<li id="li-24"><p id="p-99">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-31">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
+<p id="p-100">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
 <div class="displaymath">
 \begin{align*}
 S &amp;= \{1,2,3,4,5,6,7\}\\
@@ -121,11 +138,11 @@ C &amp;= \{2,4,6,7\}
 </div>
 <p data-braille="continuation">Find each of the following. Drawing a Venn diagram will help!</p>
 <ol class="lower-alpha">
-<li id="li-5"><p id="p-32">\(\displaystyle A\cup B\)</p></li>
-<li id="li-6"><p id="p-33">\(\displaystyle (A\cup B)\cap C\)</p></li>
-<li id="li-7"><p id="p-34">\(\displaystyle C^C \cup B\)</p></li>
-<li id="li-8"><p id="p-35">\(\displaystyle (A\cap B)^C\)</p></li>
-<li id="li-9"><p id="p-36">\(\displaystyle C\setminus B\)</p></li>
+<li id="li-25"><p id="p-101">\(\displaystyle A\cup B\)</p></li>
+<li id="li-26"><p id="p-102">\(\displaystyle (A\cup B)\cap C\)</p></li>
+<li id="li-27"><p id="p-103">\(\displaystyle C^C \cup B\)</p></li>
+<li id="li-28"><p id="p-104">\(\displaystyle (A\cap B)^C\)</p></li>
+<li id="li-29"><p id="p-105">\(\displaystyle C\setminus B\)</p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>

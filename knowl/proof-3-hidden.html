@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-08T01:54:58-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">These can be proven by combining the definitions of the quantifiers with the negation forms in <a class="xref" data-knowl="./knowl/rem_conditional1.html" title="Remark 1.3">Remark 1.3</a>. To negate the universal:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lnot\bigl( \forall x\in S,\; P(x)\bigr) &amp;\equiv \lnot\bigl( (x\in S)\Rightarrow P(x)\bigr) &amp;&amp; \text{Definition of }\forall\\
+&amp;\equiv (x\in S)\wedge (\lnot P(x)) &amp;&amp; \text{Negation of implication}\\
+&amp;\equiv \exists x\in S, \lnot P(x) &amp;&amp; \text{Definition of }\exists
+\end{align*}
+</div>To negate the existential:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lnot\bigl( \exists x\in S,\; P(x)\bigr) &amp;\equiv \lnot\bigl( (x\in S)\wedge P(x)\bigr) &amp;&amp; \text{Definition of }\exists\\
+&amp;\equiv \lnot (x\in S) \vee (\lnot P(x)) &amp;&amp; \text{De Morgan's Laws}\\
+&amp;\equiv (\lnot P(x)) \vee \lnot(x\in S) &amp;&amp; \text{symmetry of "or"}\\
+&amp;\equiv \lnot(\lnot P(x)) \Rightarrow \lnot (x\in S) &amp;&amp; \text{Definition of }\Rightarrow\\
+&amp;\equiv (x\in S) \Rightarrow (\lnot P(x)) &amp;&amp; \text{Contrapositive of above}\\
+&amp;\equiv \forall x\in S, \; \lnot P(x)&amp;&amp; \text{Definition of }\forall
+\end{align*}
+</div></article></body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-04T23:36:28-05:00       *-->
+<!--*       on 2021-01-08T01:54:57-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -81,36 +81,419 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="contents.html" data-scroll="contents"><span class="title">Front Matter</span></a></li>
-<li class="link active"><a href="sec-proofs.html" data-scroll="sec-proofs"><span class="codenumber">1</span> <span class="title">Proof Techniques</span></a></li>
-<li class="link"><a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a></li>
-<li class="link"><a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a></li>
-<li class="link"><a href="sec-limits.html" data-scroll="sec-limits"><span class="codenumber">4</span> <span class="title">Limits and Sequences</span></a></li>
+<li class="link active">
+<a href="sec-proofs.html" data-scroll="sec-proofs"><span class="codenumber">1</span> <span class="title">Proof Techniques</span></a><ul>
+<li><a href="sec-proofs.html#ss_conditional" data-scroll="ss_conditional">Conditional Logic</a></li>
+<li><a href="sec-proofs.html#ss_quantified" data-scroll="ss_quantified">Quantified Logic</a></li>
+<li><a href="sec-proofs.html#ss_proof" data-scroll="ss_proof">Proof Strategies</a></li>
+<li><a href="sec-proofs.html#ws-proofs" data-scroll="ws-proofs">Proof Technique Workbook</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a><ul><li><a href="sec-settheory.html#ws-settheory" data-scroll="ws-settheory">Set Theory Workbook</a></li></ul>
+</li>
+<li class="link">
+<a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul><li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li></ul>
+</li>
+<li class="link">
+<a href="sec-limits.html" data-scroll="sec-limits"><span class="codenumber">4</span> <span class="title">Limits and Sequences</span></a><ul><li><a href="sec-limits.html#ws-limits" data-scroll="ws-limits">Limits and Sequences Workbook</a></li></ul>
+</li>
+<li class="link"><a href="sec-definitions.html" data-scroll="sec-definitions"><span class="codenumber">A</span> <span class="title">Definitions for this Workbook</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-proofs"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Proof Techniques</span>
 </h2>
-<section class="worksheet" id="ws-proofs"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">1.1</span> <span class="title">Proof Technique Workbook</span>
+<section class="subsection" id="ss_conditional"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Conditional Logic</span>
 </h3>
-<p id="p-7"><em class="emphasis">Use a direct proof to prove the statements in #1-2.</em></p>
+<article class="definition definition-like" id="def_conditional"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Conditional Statement (“Implication”).</span>
+</h6>
+<p id="p-7">Let \(P,Q\) be logical statements. The <dfn class="terminology">conditional statement</dfn> \(P\Rightarrow Q\) (read “\(P\) implies \(Q\)”, or “if \(P\text{,}\) then \(Q\)”) is true when either \(P\) is false, or when both \(P\) and \(Q\) are true:</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">\(P​\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(Q​\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(P\Rightarrow Q​\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+</table></figure></article><article class="remark remark-like" id="rem_conditional1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-8">An <em class="emphasis">equivalent</em> form of \(P\Rightarrow Q\) is</p>
+<div class="displaymath">
+\begin{equation*}
+(\lnot P) \vee Q \quad \text{("not-P, or Q")}.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-9">The <em class="emphasis">negation</em> of  \(P\Rightarrow Q\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\lnot (P\Rightarrow Q) = P \wedge (\lnot Q) \quad \text{("P and not-Q")}.
+\end{equation*}
+</div>
+</div>
+</div></div>
+<article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-10">That \(P\Rightarrow Q\) is equivalent to \((\lnot P)\vee Q\) can be proven with a truth table:</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.4<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">\(P​\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(\lnot P​\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(Q​\)</td>
+<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\((\lnot P)\vee Q​\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">T</td>
+</tr>
+</table></figure><p id="p-11">(Note that the rightmost column of this table, the truth values of \((\lnot P)\vee Q\text{,}\) are all the same as the truth values in the definition of \(P\Rightarrow Q\text{.}\))</p>
+<p id="p-12">To prove the negation formula, we can use the above along with <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\lnot\bigl( P\Rightarrow Q\bigr) &amp;\equiv \lnot\bigl( (\lnot P) \vee Q \bigr) &amp;&amp; \text{using the equivalence above}\\
+&amp;\equiv \lnot(\lnot P) \wedge (\lnot Q) &amp;&amp; \text{by De Morgan's Laws}\\
+&amp;\equiv P \wedge (\lnot Q).
+\end{align*}
+</div></article></div></article><article class="definition definition-like" id="def_contrapositive"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive.</span>
+</h6>
+<p id="p-13">The <dfn class="terminology">contrapositive</dfn> of the implication \(P\Rightarrow Q\) is the implication</p>
+<div class="displaymath">
+\begin{equation*}
+(\lnot Q)\Rightarrow (\lnot P) \qquad \text{(not-Q implies not-P)}.
+\end{equation*}
+</div></article><article class="remark remark-like" id="rem_conditional2"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h6>
+<p id="p-14">The contrapositive of \(P\Rightarrow Q\) is <em class="emphasis">equivalent</em> to \(P\Rightarrow Q\text{.}\) So the contrapositive can be useful to prove \(P\Rightarrow Q\text{:}\) it is often easier to follow.</p>
+<article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-15">We can prove that \(P\Rightarrow Q\) is equivalent to \((\lnot Q)\Rightarrow (\lnot P)\) using the result of <a class="xref" data-knowl="./knowl/rem_conditional1.html" title="Remark 1.3">Remark 1.3</a> as follows:</p>
+<div class="displaymath">
+\begin{align*}
+(\lnot Q)\Rightarrow (\lnot P) &amp;\equiv \bigl( \lnot (\lnot Q) \bigr) \vee (\lnot P) &amp;&amp; \text{by the Remark}\\
+&amp;\equiv Q\vee (\lnot P)\\
+&amp;\equiv (\lnot P)\vee Q &amp;&amp; \text{by symmetry of "or"}\\
+&amp;\equiv P\Rightarrow Q &amp;&amp; \text{by the Remark}.
+\end{align*}
+</div></article></div></article><article class="definition definition-like" id="def_converse"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Converse and Inverse.</span>
+</h6>
+<p id="p-16">The <dfn class="terminology">converse</dfn> of the implication \(P\Rightarrow Q\) is the implication \(Q\Rightarrow P\) (“\(Q\) implies \(P\)”, or “if \(Q\text{,}\) then \(P\)”).</p>
+<p id="p-17">The <dfn class="terminology">inverse</dfn> of the implication \(P\Rightarrow Q\) is the implication \((\lnot P) \Rightarrow (\lnot Q)\) (“not-\(P\) implies not-\(Q\)”).</p></article><article class="warning remark-like" id="warn_converse"><h6 class="heading">
+<span class="type">Warning</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h6>
+<p id="p-18">An implication is <em class="emphasis">not</em> necessarily equivalent to its converse! In other words, \(P\Rightarrow Q\) and \(Q\Rightarrow P\) are in general logically <em class="emphasis">independent</em> statements. We cannot use either to prove the other, so you should never confuse or replace one by the other!</p></article><article class="remark remark-like" id="rem_conditional3"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h6>
+<p id="p-19">The converse and inverse of an implication are each other's contrapositive (for example, the converse is the contrapositive of the inverse). So in particular they are equivalent one to another! This means the four different implications associated with two logical statements fall into two pairs of equivalents:</p>
+<figure class="table table-like" id="table_fourfold"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption><table>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"><dfn class="terminology">Implication</dfn></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"><dfn class="terminology">Inverse</dfn></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(​P\Rightarrow Q\)</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(Q\Rightarrow P​\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">is equivalent to</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">is equivalent to</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\((\lnot Q)\Rightarrow (\lnot P)​\)</td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\((\lnot P)\Rightarrow (\lnot Q)​\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"><dfn class="terminology">Contrapositive</dfn></td>
+<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell"><dfn class="terminology">Converse</dfn></td>
+</tr>
+</table></figure></article><article class="definition definition-like" id="def_biconditional"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Biconditional Statement.</span>
+</h6>
+<p id="p-20">The <dfn class="terminology">biconditional statement</dfn> denoted \(P \Leftrightarrow Q\) and read “\(P\) if and only if \(Q\)”, is the conjunction of the implication \(P\Rightarrow Q\) and its converse \(Q\Rightarrow P\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+P\Leftrightarrow Q \equiv \bigl( P\Rightarrow Q \bigr) \wedge \bigl( Q\Rightarrow P\bigr).
+\end{equation*}
+</div>
+<p id="p-21">In other words, \(P\Leftrightarrow Q\) is true exactly when “\(P\) implies \(Q\) <em class="emphasis">and also</em> \(Q\) implies \(P\)”.</p></article><article class="remark remark-like" id="rem_conditional4"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h6>
+<p id="p-22">Only when the biconditional \(P\Leftrightarrow Q\) is true do we know that <em class="emphasis">all four</em> of the implications in <a class="xref" data-knowl="./knowl/table_fourfold.html" title="Table 1.10">Table 1.10</a> are equivalent!</p></article></section><section class="subsection" id="ss_quantified"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Quantified Logic</span>
+</h3>
+<article class="definition definition-like" id="def_universal"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Quantifier.</span>
+</h6>
+<p id="p-23">The <dfn class="terminology">universal quantifier</dfn> “for-all”, denoted \(\forall\text{,}\) describes a parameterized family of logical statements \(P(x)\) which are true every time \(x\) belongs to a given set \(S\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\forall x \in S, \; P(x) &amp; \qquad \equiv \qquad&amp;&amp; (x \in S) \Rightarrow P(x).\\
+\text{"For all x in S, we have P(x)."} &amp; &amp;&amp; \text{"If x is in S, then P(x)."}
+\end{align*}
+</div></article><article class="definition definition-like" id="def_existential"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Existential Quantifier.</span>
+</h6>
+<p id="p-24">The <dfn class="terminology">existential quantifier</dfn> “there-exists”, denoted \(\exists\text{,}\) describes <em class="emphasis">one</em> of a parameterized family of logical statements \(P(x)\) which is true for at least one \(x\) in a given set \(S\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\exists x \in S, \; P(x) &amp; \qquad \equiv \qquad&amp;&amp; (x \in S) \wedge P(x).\\
+\text{"There exists an x in S, such that P(x)."} &amp; &amp;&amp; \text{"P(x) is true, and x belongs to S."}
+\end{align*}
+</div></article><article class="remark remark-like" id="rem_quantified"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Negating quantified statements.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-25">The universal statement \(\forall x\in S, \; P(x)\) is <em class="emphasis">false</em> when it fails for at least one \(x\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lnot\bigl( \forall x\in S, \; P(x) \bigr) \, \equiv \, \exists x\in S, \; \lnot P(x).
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-26">The existential statement \(\exists x\in S, \; P(x)\) is <em class="emphasis">false</em> when it is false for every \(x\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lnot\bigl( \exists x\in S, \; P(x) \bigr) \, \equiv \, \forall x\in S, \; \lnot P(x).
+\end{equation*}
+</div>
+</div>
+</div></div>
+<p id="p-27">Remember: negation turns \(\forall\) into \(\exists\) and vice versa. Think: what evidence would be needed to prove this claim is false? “For all” is false if even a single example fails; “there exists” is false only if <em class="emphasis">all</em> possible examples fail.</p>
+<article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-28">These can be proven by combining the definitions of the quantifiers with the negation forms in <a class="xref" data-knowl="./knowl/rem_conditional1.html" title="Remark 1.3">Remark 1.3</a>. To negate the universal:</p>
+<div class="displaymath">
+\begin{align*}
+\lnot\bigl( \forall x\in S,\; P(x)\bigr) &amp;\equiv \lnot\bigl( (x\in S)\Rightarrow P(x)\bigr) &amp;&amp; \text{Definition of }\forall\\
+&amp;\equiv (x\in S)\wedge (\lnot P(x)) &amp;&amp; \text{Negation of implication}\\
+&amp;\equiv \exists x\in S, \lnot P(x) &amp;&amp; \text{Definition of }\exists
+\end{align*}
+</div>To negate the existential:<div class="displaymath">
+\begin{align*}
+\lnot\bigl( \exists x\in S,\; P(x)\bigr) &amp;\equiv \lnot\bigl( (x\in S)\wedge P(x)\bigr) &amp;&amp; \text{Definition of }\exists\\
+&amp;\equiv \lnot (x\in S) \vee (\lnot P(x)) &amp;&amp; \text{De Morgan's Laws}\\
+&amp;\equiv (\lnot P(x)) \vee \lnot(x\in S) &amp;&amp; \text{symmetry of "or"}\\
+&amp;\equiv \lnot(\lnot P(x)) \Rightarrow \lnot (x\in S) &amp;&amp; \text{Definition of }\Rightarrow\\
+&amp;\equiv (x\in S) \Rightarrow (\lnot P(x)) &amp;&amp; \text{Contrapositive of above}\\
+&amp;\equiv \forall x\in S, \; \lnot P(x)&amp;&amp; \text{Definition of }\forall
+\end{align*}
+</div></article></div></article></section><section class="subsection" id="ss_proof"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Proof Strategies</span>
+</h3>
+<article class="definition definition-like" id="def_directproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Direct Proof.</span>
+</h6>
+<p id="p-29">A <dfn class="terminology">direct proof</dfn> of the implication \(P\Rightarrow Q\) follows the form</p>
+<ol class="decimal">
+<li id="li-1"><p id="p-30">Suppose \(P\text{.}\) (Assume that \(P\) is true.)</p></li>
+<li id="li-2"><p id="p-31">We wish to show \(Q\text{.}\) (Deduce that \(Q\) is true.)</p></li>
+</ol></article><article class="definition definition-like" id="def_contraproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Contrapositive.</span>
+</h6>
+<p id="p-32">A <dfn class="terminology">proof by contrapositive</dfn> of the implication \(P\Rightarrow Q\) is a proof of its contrapositive \((\lnot Q)\Rightarrow (\lnot P)\text{.}\) The core of the proof is \(direct\text{,}\) so it follows the form</p>
+<ol class="decimal">
+<li id="li-3"><p id="p-33">Suppose \(\lnot Q\text{.}\) (Assume that \(Q\) is false.)</p></li>
+<li id="li-4"><p id="p-34">We wish to show \(\lnot P\text{.}\) (Deduce that \(P\) is false.)</p></li>
+</ol></article><article class="remark remark-like" id="rem_proof1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
+</h6>
+<p id="p-35">Writing out the formal definitions of terms is extremely helpful in discovering a proof. Try to lay out all definitions involved, and see how they connect. Often a proof following one of the above forms can be found by writing out the definitions involved in the beginning and the end, and working to see how they might meet in the middle!</p></article><article class="definition definition-like" id="def_contraproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Contradiction.</span>
+</h6>
+<p id="p-36">A <dfn class="terminology">proof by contradiction</dfn> of the implication \(P\Rightarrow Q\) is a proof that its negation \(P\wedge (\lnot Q)\) must be false, because a “contradiction” \(R\wedge (\lnot R)\) may be deduced from it. It has the form</p>
+<ol class="decimal">
+<li id="li-5"><p id="p-37">Suppose \(P \wedge (\lnot Q)\text{.}\) (Assume that \(P\) is true, but \(Q\) is false.)</p></li>
+<li id="li-6"><p id="p-38">We wish to show that \(R\text{.}\) (Deduce that some statement \(R\) is true.)</p></li>
+<li id="li-7"><p id="p-39">However, we also will show \(\lnot R\text{.}\) (Deduce that that same \(R\) is also false.)</p></li>
+<li id="li-8"><p id="p-40">Since both (2) and (3) cannot simultaneously hold, our assumption (1) cannot hold. Thus, \(P\Rightarrow Q\) must be true.</p></li>
+</ol></article><article class="remark remark-like" id="rem_proof2"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
+</h6>
+<p id="p-41">Proof by contradiction can be useful because it allows you to stipulate (assume the truth) of <em class="emphasis">two</em> statements, \(P\) and \(\lnot Q\text{.}\) This can give you more to work with.</p>
+<p id="p-42">However, we often don't know ahead of time what statement \(R\) will be contradicted. In fact \(R\) is often unrelated to the material of \(P\) and \(Q\text{.}\) Often you don't need to explicitly prove \(R\text{:}\) it may be a statement known to be true from elsewhere. For example, you might deduce in your proof that “\(1/2\) is an integer”, which is the negation of “\(1/2\) is not an integer” which you may have proven long ago in a different course.</p></article><article class="warning remark-like" id="warn_contradiction"><h6 class="heading">
+<span class="type">Warning</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
+</h6>
+<p id="p-43">Sometimes, a proof writer will say “by contradiction” but their proof in fact follows the proof by contrapositive form. To avoid falling into this trap, ask yourself: what was the \(R\) that was both true and false? If \(R\) was in fact the same as \(P\text{,}\) then the proof is actually by contrapositive -- not contradiction. (This suggests it can be written more simply!)</p></article><article class="definition definition-like" id="def_proofuniversal"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a Universal Statement.</span>
+</h6>
+<p id="p-44">To prove the universal statement \(\forall x\in S, \; P(x)\text{,}\) we must show that \(P(x)\) holds for <em class="emphasis">every</em> choice of \(x\in S\text{.}\)</p>
+<p id="p-45">We do this by using an <dfn class="terminology">arbitrary choice</dfn>: “selecting” a (completely non-specific) element \(x\in S\) and then deducing the truth of \(P(x)\text{.}\) The form is:</p>
+<ol class="decimal">
+<li id="li-9"><p id="p-46">Let \(x\in S\) be chosen arbitrarily.</p></li>
+<li id="li-10"><p id="p-47">We will show that \(P(x)\text{.}\) (Deduce that \(P(x)\) is true without using any knowledge about \(x\) beyond its belonging to \(S\text{.}\))</p></li>
+<li id="li-11"><p id="p-48">Since \(x\) was chosen arbitrarily, we have \(P(x)\) holds for all \(x\in S\text{.}\)</p></li>
+</ol></article><article class="remark remark-like" id="rem_proof3"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
+</h6>
+<p id="p-49">The proof strategy for universal statements in <a class="xref" data-knowl="./knowl/def_proofuniversal.html" title="Definition 1.22: Proving a Universal Statement">Definition 1.22</a> is really a <a class="xref" data-knowl="./knowl/def_directproof.html" title="Definition 1.16: Direct Proof">direct proof</a> of the <a class="xref" data-knowl="./knowl/def_universal.html" title="Definition 1.13: Universal Quantifier">universal implication</a> \((x\in S) \Rightarrow P(x)\text{.}\)</p></article><article class="definition definition-like" id="def_proofexistential"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Proving an Existential Statement.</span>
+</h6>
+<p id="p-50">To prove an existential statement \(\exists x\in S, \; P(x)\text{,}\) we have two choices.</p>
+<ol class="decimal">
+<li id="li-12">
+<p id="p-51"><dfn class="terminology">Constructive proof</dfn>: Explicitly find, or construct, an example of an element \(x\in S\) for which \(P(x)\) is true. For example: a constructive proof of “There exists an even number \(x\) such that \(x\) is prime” might be:</p>
+<div class="displaymath">
+\begin{equation*}
+\text{Let }x=2. \text{ Then }x\text{ is an even number and }x\text{ is prime.}
+\end{equation*}
+</div>
+</li>
+<li id="li-13">
+<p id="p-52"><dfn class="terminology">Non-constructive proof</dfn>: Prove by contradiction that non-existence is impossible. These proofs are sometimes considered less illuminating, but can be simpler to discover when you can't find the right “trick” to construct an example.</p>
+<p id="p-53">A non-constructive proof of “Let \(f(x)\) be a polynomial of degree 3. Then there exists \(a\in\mathbb{R}\) such that \(f(a)=0\)” might be:</p>
+<ol class="lower-alpha">
+<li id="li-14"><p id="p-54">Suppose this were untrue, and \(f(x)\neq 0\) for all \(x\in \mathbb{R}\text{.}\)</p></li>
+<li id="li-15"><p id="p-55">Then since \(f\) is a continuous function, either \(f(x) \gt 0\) for all \(x\text{,}\) or \(f(x) \lt 0\) for all \(x\) by the intermediate value theorem.</p></li>
+<li id="li-16"><p id="p-56">Since all polynomials diverge toward infinity, this means that \(\displaystyle\lim_{x\to -\infty} f(x) = \displaystyle\lim_{x\to +\infty}\text{,}\) that is, \(f\) either approaches \(+\infty\) on both ends, or it approaches \(-\infty\) on both ends.</p></li>
+<li id="li-17"><p id="p-57">But we know from calculus that this means the degree of \(f\) must be <em class="emphasis">even</em>, not odd, a contradiction. Thus our assumption that \(f(x)\neq 0\) for all \(x\in\mathbb{R}\) must be false.</p></li>
+</ol>
+<p data-braille="continuation">This proof tells us nothing about “how to find” an \(a\) such that \(f(a)=0\) (that is, how to solve a cubic equation); but it nevertheless tells us that such an \(a\) must exist.</p>
+</li>
+</ol></article><article class="definition definition-like" id="def_bycases"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Cases.</span>
+</h6>
+<p id="p-58">Given a universal statement \(\forall x \in S,\; P(x)\text{,}\) a <dfn class="terminology">proof by cases</dfn> is a choice of exhaustive subsets of \(S\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+S = S_1 \cup S_2 \cup \cdots \cup S_n\; ,
+\end{equation*}
+</div>
+<p data-braille="continuation">and a separate proof of each of the universal statements \(\forall x \in S_i, \; P(x)\) for \(i=1,2,\ldots,n\text{.}\)</p>
+<p id="p-59">In other words, we come up with a list of separate conditions that \(x\) might satisfy, as long as every \(x\) is guaranteed to satisfy (at least) one of them, and prove the statement is true under each of those conditions (“cases”) one by one.</p></article><article class="remark remark-like" id="rmk_proof5"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
+</h6>
+<p id="p-60">A common use of proof by cases is for quantified statements over the integers, for which a different proof approach might be needed for even integers than for odd integers. For example:</p>
+<article class="proposition theorem-like" id="ex_proof6"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
+</h6>
+<p id="p-61">For all integers \(n \in \mathbb{Z}\text{,}\) we have that \(n^2\) and \(n\) have the same <a class="xref" data-knowl="./knowl/def_parity.html" title="Definition A.2: Parity, Even, Odd">parity</a>.</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-62"><em class="emphasis">Case 1: If \(n\) is <a class="xref" data-knowl="./knowl/def_even.html" title="Equation A.1">even</a>.</em> Then there exists \(k\in\mathbb{Z}\) such that \(n=2k\text{.}\) We then have</p>
+<div class="displaymath">
+\begin{equation*}
+n^2 = (2k)^2 = 4k^2 = 2\bigl( 2k^2 \bigr) = 2 \bigl( k^\prime \bigr)
+\end{equation*}
+</div>
+<p data-braille="continuation">and since \(k^\prime=2k^2\) is an integer, we see that \(n^2\) must be even as well.</p>
+<p id="p-63"><em class="emphasis">Case 2: If \(n\) is <a class="xref" data-knowl="./knowl/def_odd.html" title="Equation A.2">odd</a>.</em> Then there exists \(k\in\mathbb{Z}\) such that \(n=2k+1\text{.}\) We then have</p>
+<div class="displaymath">
+\begin{equation*}
+n^2 = (2k+1)^2 = 4k^2+2k+1 = 2\bigl( 2k^2 +k  \bigr) + 1 = 2 \bigl( k^\prime \bigr)+1
+\end{equation*}
+</div>
+<p data-braille="continuation">and since \(k^\prime=2k^2+k\) is an integer, we see that \(n^2\) must be odd as well.</p>
+<p id="p-64">Since every integer \(n\) is either even or odd, this covers all cases and the proof is complete.</p></article></div></article><article class="definition definition-like" id="def_induction"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction.</span>
+</h6>
+<p id="p-65">To prove a statement quantified on the natural numbers, \(\forall n\in\mathbb{N}, \; P(n)\text{,}\) we can use a <dfn class="terminology">proof by induction</dfn> of the following form.</p>
+<ol class="decimal">
+<li id="li-18"><p id="p-66"><em class="emphasis">Base case:</em> Prove \(P(1)\) is true.</p></li>
+<li id="li-19"><p id="p-67"><em class="emphasis">Inductive case:</em> Prove that \(\forall k\in\mathbb{N}\text{,}\) we have \(P(k)\Rightarrow P(k+1)\text{.}\)</p></li>
+<li id="li-20"><p id="p-68">Conclude that \(P(n)\) is true for all natural numbers \(n\) by the Principle of Mathematical Induction.</p></li>
+</ol></article><article class="remark remark-like" id="rem_proof6"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
+</h6>
+<p id="p-69">As an example, consider the statement</p>
+<div class="displaymath">
+\begin{equation*}
+\text{For all natural numbers }n\text{, we have } 1+3+5+\cdots+(2n-1) = n^2.
+\end{equation*}
+</div>
+<p id="p-70">Usually, the base case in an induction is a simple statement that can be directly checked, since you can substitute \(1\) for \(n\text{.}\)</p>
+<p id="p-71">Here, the base case is found by substituting \(1\) for \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+1+3+5+\cdots+(2\cdot 1 - 1) &amp;= 1^2 \\
+1+3+5+\cdots+1 &amp; = 1^2 &amp;&amp; \text{but we understand the LHS has only one addend:}\\
+1 &amp;= 1^2 &amp;&amp; \text{which is true.}
+\end{align*}
+</div>
+<p id="p-72">The inductive implication is usually proven with a direct proof. This begins by stipulating the <dfn class="terminology">inductive hypothesis</dfn>, assuming that \(P(k)\) is true for an arbitrary natural number \(k\text{.}\) Do not overlook this assumption step!</p>
+<div class="displaymath">
+\begin{equation*}
+\text{Let }k\in\mathbb{N}\text{ be chosen arbitrarily. Assume }1+3+5+\cdots+(2k-1)=k^2\text{ is true.}
+\end{equation*}
+</div>
+<p id="p-73">Then, we wish to show that \(P(k+1)\) holds, <em class="emphasis">using</em> the previous assumption. Many times, by writing out and manipulating \(P(k+1)\text{,}\) always looking back at what you assumed, you can see how the assumed true statement \(P(k)\) comes into play.</p>
+<div class="displaymath">
+\begin{equation*}
+P(k+1): \quad 1+3+5+\cdots+\bigl(2(k+1)-1\bigr) = (k+1)^2
+\end{equation*}
+</div>
+<p data-braille="continuation">To prove this, notice that the unseen second-to-last term in the sum on the LHS is \((2k-1)\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\underbrace{1+3+5+\cdots+(2k-1)}_{{}=k^2} + \bigl(2(k+1)-1) &amp;&amp;  \text{by using P(k)}\\
+= k^2 + \bigl( 2(k+1)-1\bigr) \\
+= k^2 + (2k+2-1) = k^2+2k+1 \\
+= (k+1)^2 &amp;&amp; \text{which establishes P(k+1) is true.}
+\end{align*}
+</div></article><article class="warning remark-like" id="warn_induction"><h6 class="heading">
+<span class="type">Warning</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
+</h6>
+<p id="p-74">Every successful induction proof makes <em class="emphasis">explicit</em> use of the induction hypothesis \(P(k)\text{.}\) You should be able to circle the line of your proof where the assumed truth of that hypothesis was applied. If you cannot... either you have a correct proof that's <em class="emphasis">not</em> by induction, or you have a faulty proof by induction!</p></article></section><section class="worksheet" id="ws-proofs"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">1.4</span> <span class="title">Proof Technique Workbook</span>
+</h3>
+<p id="p-75"><em class="emphasis">Use a direct proof to prove the statements in #1-2.</em></p>
 <article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-8">Prove that the square of a rational number is rational.</p></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-9">Suppose that \(a,b,c\) are integers. Suppose that \(a^2\) divides \(b\text{,}\) and that \(b^3\) divides \(c\text{.}\) Prove that \(b^6\) divides \(c\text{.}\)</p></article><p id="p-10"><em class="emphasis">Use an indirect proof to prove the statements in #3-5.</em></p>
-<article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-11">Prove that if \(n\) is a natural number, then \(\displaystyle\frac{n}{n+1} \gt \displaystyle\frac{n}{n+2}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-12">Prove that \(\sqrt{2}\) is an irrational number.</p></article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-13">Let \(n\in \mathbb{Z}\text{.}\) If \(n^2-6n+5\) is even, then \(n\) is odd.</p></article><article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-14">Prove the biconditional statement: Let \(m,n\) be integers. Then \(m\) and \(n\) have the same parity if and only if \(m^2+n^2\) is even.</p></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-15">Prove by induction that for all natural numbers \(n\text{,}\) we have</p>
+<p id="p-76">Prove that the square of a <a class="xref" data-knowl="./knowl/def_rational.html" title="Definition A.1: Rational Numbers">rational number</a> is rational.</p></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-77">Suppose that \(a,b,c\) are integers. Suppose that \(a^2\) <a class="xref" data-knowl="./knowl/def_divides.html" title="Definition A.4: Divisibility">divides</a> \(b\text{,}\) and that \(b^3\) divides \(c\text{.}\) Prove that \(b^6\) divides \(c\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-78">Prove that if \(x\) and \(y\) are <a class="xref" data-knowl="./knowl/def_parity.html" title="Definition A.2: Parity, Even, Odd">odd</a> integers, then \(xy\) is an odd integer.</p></article><p id="p-79"><em class="emphasis">Use an indirect proof (contradiction or contrapositive) to prove the statements in #3-5.</em></p>
+<article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-80">Prove that if \(n\) is a natural number, then \(\displaystyle\frac{n}{n+1} \gt \displaystyle\frac{n}{n+2}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-81">Let \(n\in \mathbb{Z}\text{.}\) If \(n^2-6n+5\) is <a class="xref" data-knowl="./knowl/def_parity.html" title="Definition A.2: Parity, Even, Odd">even</a>, then \(n\) is odd.</p></article><article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-82">Prove that \(\sqrt{2}\) is an irrational number.</p></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-83">Prove that if \(n^3\) is an odd integer, then \(\text{}\) is an odd integer.</p></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-84">Prove the <a class="xref" data-knowl="./knowl/def_biconditional.html" title="Definition 1.11: Biconditional Statement">biconditional statement</a>: Let \(m,n\) be integers. Then \(m\) and \(n\) have the same parity if and only if \(m^2+n^2\) is even.</p></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-85">Prove by induction that for all natural numbers \(n\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 1+2+3+4+\cdots+n = \frac{n(n+1)}{2}.
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-16">Prove by induction that for all \(n\geq 9\text{,}\) we have \(n! \gt 4^n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-17">Prove that if \(n^3\) is an odd integer, then \(\text{}\) is an odd integer.</p></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-18">Prove that if \(x\) and \(y\) are odd integers, then \(xy\) is an odd integer.</p></article></section></section></div></main>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-86">Prove by induction that for all \(n\geq 9\text{,}\) we have \(n! \gt 4^n\text{.}\)</p></article></section></section></div></main>
 </div>
 </body>
 </html>
