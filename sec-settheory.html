@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T01:54:58-05:00       *-->
+<!--*       on 2021-01-09T22:44:23-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -90,7 +90,11 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li class="link active">
-<a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a><ul><li><a href="sec-settheory.html#ws-settheory" data-scroll="ws-settheory">Set Theory Workbook</a></li></ul>
+<a href="sec-settheory.html" data-scroll="sec-settheory"><span class="codenumber">2</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="sec-settheory.html#ss-setdefs" data-scroll="ss-setdefs">Sets and Set Operations</a></li>
+<li><a href="sec-settheory.html#ss-setproofs" data-scroll="ss-setproofs">Proofs Involving Sets</a></li>
+<li><a href="sec-settheory.html#ws-settheory" data-scroll="ws-settheory">Set Theory Workbook</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul><li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li></ul>
@@ -104,30 +108,243 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-settheory"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Set Theory</span>
 </h2>
-<section class="worksheet" id="ws-settheory"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">2.1</span> <span class="title">Set Theory Workbook</span>
+<section class="subsection" id="ss-setdefs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Sets and Set Operations</span>
 </h3>
-<p id="p-87"><em class="emphasis">In #1-3, sketch and shade a Venn diagram that represents the indicated set operation.</em></p>
+<p id="p-87">A <dfn class="terminology">set</dfn> \(A\) is a collection of elements for which the <a class="external" href="https://en.wikipedia.org/wiki/Law_of_excluded_middle" target="_blank">Law of Excluded Middle</a> applies to their membership: Given any \(x\text{,}\) the answer to the question “Is \(x\) an element of \(A\text{?}\)” is either “yes” or “no”.</p>
+<article class="remark remark-like" id="ex_sets"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Important Sets to Know.</span>
+</h6>
+<p id="p-88">Real analysis is about the “set of real numbers”: where it comes from, and what properties it has. The following sets are useful to know along the way.</p>
+<div class="displaymath">
+\begin{align}
+\mathbb{N} &amp;= \{ 1, 2, 3, 4, \ldots \} &amp;&amp; \text{The natural numbers}\tag{2.1}\\
+\mathbb{Z} &amp;= \{ \ldots, -2,-1,0,1,2,\ldots \} &amp;&amp; \text{The integers}\tag{2.2}\\
+\mathbb{Q} &amp;= \left\{ \frac{p}{q} \colon p,q\in\mathbb{Z} \text{ and } q\neq 0 \right\} &amp;&amp; \text{The rational numbers}\label{eq_rational}\tag{2.3}\\
+\mathbb{I} = \mathbb{R}\setminus\mathbb{Q} &amp;= \bigl\{ \ldots,\sqrt{2},\sqrt{3},e,\pi,\ldots,\bigr\} &amp;&amp; \text{The irrational numbers}\tag{2.4}
+\end{align}
+</div>
+<p id="p-89">You may remember that rational numbers are exactly those that have “eventually repeating decimal expansions”. While this is true, it's almost always not the most helpful way to understand them and you should get used to using <a class="xref" data-knowl="./knowl/eq_rational.html" title="Equation 2.3">the above definition</a>. You might want to forget, at least in the beginning, that numbers have decimal expansions at all!</p></article><article class="definition definition-like" id="def_subset"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Subset.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-90">Let \(A,B\) be two sets. We say \(A\) is a <dfn class="terminology">subset</dfn> of \(B\text{,}\) and write \(A\subseteq B\text{,}\) if every element of \(A\) is also an element of \(B\text{:}\)</p>
+<div class="displaymath">
+\begin{gather}
+(x\in A) \Rightarrow (x\in B).\label{eq_subset}\tag{2.5}
+\end{gather}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/sets5.jpg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="definition definition-like" id="def_equality"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Equality of Sets.</span>
+</h6>
+<p id="p-91">Let \(A,B\) be two sets. We say that \(A\) is <dfn class="terminology">equal to</dfn> \(B\text{,}\) and write \(A=B\text{,}\) if every element of \(A\) is also an element of \(B\text{,}\) <em class="emphasis">and</em> vice versa:</p>
+<div class="displaymath">
+\begin{gather}
+A \subseteq B \text{ and } B\subseteq A.\label{eq_equality}\tag{2.6}
+\end{gather}
+</div></article><article class="definition definition-like" id="def_universe"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Universe.</span>
+</h6>
+<p id="p-92">A <dfn class="terminology">universe</dfn> (or <dfn class="terminology">universal set</dfn>) for a collection of sets \(A_1,A_2,A_3,\ldots\) is a set \(U\) of which all of the \(A_i\) are subsets:</p>
+<div class="displaymath">
+\begin{equation*}
+A_i \subseteq U \qquad \text{for all }i=1,2,3,\ldots
+\end{equation*}
+</div></article><p id="p-93">In the following definitions, let \(A,B\) be two sets and \(S\) be a universal set for \(A,B\text{,}\) that is, \(A,B \subseteq S\text{.}\)</p>
+<article class="definition definition-like" id="def_union"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Union.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-94">The <dfn class="terminology">union</dfn> of \(A\) and \(B\text{,}\) denoted \(A\cup B\text{,}\) is the set of all elements which either belong to \(A\text{,}\) belong to \(B\text{,}\) or belong to both sets:</p>
+<div class="displaymath">
+\begin{equation*}
+A\cup B = \bigl\{ x\in S \colon (x\in A) \vee (x\in B) \bigr\}.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/sets1.jpg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-95">The union \(A\cup B\) consists of the blue, green, and yellow regions shaded above.</p></article><article class="definition definition-like" id="def_intersection"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Intersection.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-96">The <dfn class="terminology">intersection</dfn> of \(A\) and \(B\text{,}\) denoted \(A\cap B\text{,}\) is the set of all elements which \(A\) and \(B\) have in common:</p>
+<div class="displaymath">
+\begin{equation*}
+A\cap B = \bigl\{ x\in S \colon (x\in A) \wedge (x\in B) \bigr\}.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/sets2.jpg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-97">The intersection \(A\cup B\) consists only of the green shaded region above.</p></article><article class="definition definition-like" id="def_complement"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Complement.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-98">The <dfn class="terminology">complement</dfn> of \(A\text{,}\) denoted \(A^C\text{,}\) is the set of all elements in the universe which do <em class="emphasis">not</em> belong to \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A^C = \bigl\{ x\in S \colon x\not\in A \bigr\}.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/sets3.jpg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-99">The complement \(A^C\) gives the universe surrounding \(A\text{.}\)</p></article><article class="definition definition-like" id="def_difference"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Difference.</span>
+</h6>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;">
+<p id="p-100">The <dfn class="terminology">difference</dfn> of \(A\) and \(B\text{,}\) denoted \(A\setminus B\text{,}\) is the set of all elements of \(A\) which are <em class="emphasis">not</em> elements of \(B\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A\setminus B = \bigl\{ x\in S \colon (x\in A) \wedge (x\not\in B) \bigr\}.
+\end{equation*}
+</div>
+</div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/sets4.jpg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-101">The set difference \(A\setminus B\) consists only of the blue region shaded above.</p></article><article class="remark remark-like" id="ex_setalgebra"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+</h6>
+<p id="p-102">Venn diagrams are helpful in understanding set algebra operations. In these examples, the indicated set consists of all the regions shaded in colors.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="fig_set1"><img src="images/sets6.jpg" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.10<span class="period">.</span></span><span class="space"> </span>The set \((A\cup B)\setminus C\text{.}\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="fig_set2"><img src="images/sets7.jpg" style="width: 100%; height: auto;" alt=""><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span>The set \((A\cap C)\cup B\text{.}\)</figcaption></figure></div>
+</div></div></article><p id="p-103">The following theorem gives properties of these set operations.</p>
+<article class="theorem theorem-like" id="thm_setprops"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Set Algebra Properties.</span>
+</h6>
+<p id="p-104">Let \(A,B,C\) be sets. Then each of the following hold.</p>
+<div class="displaymath">
+\begin{align}
+A\cup B &amp;= B\cup A &amp;&amp; \text{Commutative law for union}\label{eq_communion}\tag{2.7}\\
+A\cap B &amp;= B\cap A &amp;&amp; \text{Commutative law for intersection}\label{eq_comminter}\tag{2.8}\\
+A\cup (B\cup C) &amp;= (A\cup B)\cup C &amp;&amp; \text{Associative law for union}\label{eq_assocunion}\tag{2.9}\\
+A\cap (B\cap C) &amp;= (A\cap B)\cap C &amp;&amp; \text{Associative law for intersection}\label{eq_associnter}\tag{2.10}\\
+A\cup (B\cap C) &amp;= (A\cup B)\cap(A\cup C)  &amp;&amp; \text{Distributive law for union}\label{eq_distunion}\tag{2.11}\\
+A\cap (B\cup C) &amp;= (A\cap B)\cup(A\cap C) &amp;&amp; \text{Distributive law for intersection}\label{eq_distinter}\tag{2.12}
+\end{align}
+</div></article><article class="theorem theorem-like" id="thm_demorgan_sets"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws for Sets.</span>
+</h6>
+<p id="p-105">Given two sets \(A,B\text{,}\) the following equalities hold:</p>
+<ol class="decimal">
+<li id="li-21">
+<p id="p-106">The complement of a union is the intersection of complements:</p>
+<div class="displaymath">
+\begin{equation*}
+\bigl(A\cup B\bigr)^c = A^c \cap B^c
+\end{equation*}
+</div>
+</li>
+<li id="li-22">
+<p id="p-107">The complement of an intersection is the union of complements:</p>
+<div class="displaymath">
+\begin{equation*}
+\bigl(A\cap B\bigr)^c = A^c \cup B^c
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="definition definition-like" id="def_cardinality"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Cardinality.</span>
+</h6>
+<p id="p-108">Let \(A\) be a set. The <dfn class="terminology">cardinality</dfn> of \(A\text{,}\) denoted<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> by \(N(A)\text{,}\) is the number of elements in the set \(A\text{,}\) if this number is finite.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><p id="p-109">Other notations for cardinality include \(n(A), \#(A), \) and \(|A|\text{.}\)</p></div></div></article><article class="remark remark-like" id="ex_cardinality"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
+</h6>
+<p id="p-110">Let \(A= \bigl\{ x\in\mathbb{R} \colon x^2-2=0 \bigr\}\text{.}\) Then \(N(A)=2\text{,}\) because \(A\) has two elements:</p>
+<div class="displaymath">
+\begin{equation*}
+A = \bigl\{ \sqrt{2}, -\sqrt{2} \bigr\}.
+\end{equation*}
+</div></article><article class="definition definition-like" id="def_powerset"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Power Set.</span>
+</h6>
+<p id="p-111">Let \(A\) be a set. The <dfn class="terminology">power set</dfn> of \(A\text{,}\) denoted \(\mathcal{P}(A)\text{,}\) is the set whose elements are exactly the <em class="emphasis">subsets</em> of \(A\text{.}\)</p></article><article class="remark remark-like" id="ex_powerset"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
+</h6>
+<p id="p-112">Let \(A=\{a,b\}\text{.}\) Then we can list all the subsets of \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\{a,b\}, \quad \{a\}, \quad \{b\},\quad \emptyset 
+\end{equation*}
+</div>
+<p data-braille="continuation">so the power set of \(A\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P}(A) = \bigl\{\, \{a,b\}, \{a\}, \{b\}, \emptyset\, \bigr\}.
+\end{equation*}
+</div></article><article class="warning remark-like" id="warn_emptyset"><h6 class="heading">
+<span class="type">Warning</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
+</h6>
+<p id="p-113">Think twice before putting brackets around the empty set!</p>
+<p id="p-114">The set \(\emptyset\) has zero elements (is the empty set).</p>
+<p id="p-115">The set \(\{ \emptyset\}\) has <em class="emphasis">one</em> element (it's <em class="emphasis">not</em> empty: its element is “the empty set”)!</p></article></section><section class="subsection" id="ss-setproofs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Proofs Involving Sets</span>
+</h3>
+<article class="definition definition-like" id="def_membershipproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Proving set membership.</span>
+</h6>
+<p id="p-116">Let \(A\) be a set, and \(S\) be a universal set for \(A\text{.}\) Suppose there is a family of logical propositions \(P\colon S \to \{\text{true}, \text{false}\}\) which defines \(A\) via</p>
+<div class="displaymath">
+\begin{equation*}
+A=\bigl\{ x\in S \colon P(x) \bigr\}.
+\end{equation*}
+</div>
+<p id="p-117">To prove that “\(a\) is an element of \(A\)” (or \(a\in A\)), we must establish two claims:</p>
+<ol class="decimal">
+<li id="li-23"><p id="p-118">Show that \(a\) is an element of the universe (\(a\in S\)).</p></li>
+<li id="li-24"><p id="p-119">Show that \(P(a)\) is true.</p></li>
+</ol></article><article class="definition definition-like" id="def_subsetproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Proving subset (“Element argument”).</span>
+</h6>
+<p id="p-120">Let \(A,B\) be sets. To prove the claim that “\(A\) is a subset of \(B\)” (or \(A\subseteq B\)), we must establish that <a class="xref" data-knowl="./knowl/eq_subset.html" title="Equation 2.5">every element of \(A\) is also an element of \(B\)</a>.</p>
+<p id="p-121">A direct proof of <a class="xref" data-knowl="./knowl/eq_subset.html" title="Equation 2.5">\(A\subseteq B\)</a> is known as an <dfn class="terminology">element argument</dfn>. It takes the form of a <a class="xref" data-knowl="./knowl/def_proofuniversal.html" title="Definition 1.22: Proving a Universal Statement">universal statement proof</a>:</p>
+<ol class="decimal">
+<li id="li-25"><p id="p-122">Let \(x\in A\) be chosen arbitrarily.</p></li>
+<li id="li-26"><p id="p-123">We wish to show that \(x\in B\) as well.</p></li>
+<li id="li-27"><p id="p-124">(Deduce that indeed, \(x\) is an element of \(B\text{.}\))</p></li>
+<li id="li-28"><p id="p-125">Since \(x\) was chosen arbitrarily, this shows that all elements of \(A\) are also elements of \(B\text{.}\) Hence \(A\) is a subset of \(B\text{.}\)</p></li>
+</ol></article><article class="definition definition-like" id="def_equalityproof"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Proving set equality.</span>
+</h6>
+<p id="p-126">Let \(A,B\) be two sets. To prove the claim that “\(A\) is equal to \(B\)” (or \(A=B\)), we must establish <a class="xref" data-knowl="./knowl/eq_equality.html" title="Equation 2.6">both \(A\) is a subset of \(B\text{,}\) and vice versa</a>.</p>
+<p id="p-127">In other words, to prove \(A=B\) we prove (separately!) that \(A\subseteq B\) and \(B\subseteq A\text{.}\) Often each step is done via <a class="xref" data-knowl="./knowl/def_subsetproof.html" title="Definition 2.20: Proving subset (“Element argument”)">an element argument</a>, but remember we must show <em class="emphasis">both</em> ways separately. This establishes the <a class="xref" data-knowl="./knowl/def_biconditional.html" title="Definition 1.11: Biconditional Statement">biconditional statement</a></p>
+<div class="displaymath">
+\begin{equation*}
+(x\in A) \Leftrightarrow (x\in B).
+\end{equation*}
+</div></article></section><section class="worksheet" id="ws-settheory"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">2.3</span> <span class="title">Set Theory Workbook</span>
+</h3>
+<p id="p-128"><em class="emphasis">In #1-3, sketch and shade a Venn diagram that represents the indicated set operation.</em></p>
 <article class="exercise exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-88">For two sets \(A\) and \(B\text{,}\) the set \(A^C \cup B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-89">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cup C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-90">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cap C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-91">Let \(A\) and \(B\) be sets. Prove that if \(A\cup B = \emptyset\text{,}\) then \(A=\emptyset\) and \(B=\emptyset\text{.}\)</p>
+<p id="p-129">For two sets \(A\) and \(B\text{,}\) the set \(A^C \cup B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-130">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cup C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-131">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cap C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-132">Let \(A\) and \(B\) be sets. Prove that if \(A\cup B = \emptyset\text{,}\) then \(A=\emptyset\) and \(B=\emptyset\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-92">Try a proof by contrapositive.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-133">Try a proof by contrapositive.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-93">Use an element argument to prove <a class="xref" data-knowl="./knowl/thm_demorgan_sets.html" title="Corollary A.7: De Morgan's Laws for Sets">DeMorgan's Laws for Sets</a>.</p>
+<p id="p-134">Use an element argument to prove <a class="xref" data-knowl="./knowl/thm_demorgan_sets.html" title="Theorem 2.13: De Morgan's Laws for Sets">DeMorgan's Laws for Sets</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-94">Apply the logical version of <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-135">Apply the logical version of <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-95">What is the cardinality of each of the following sets?</p>
+<p id="p-136">What is the cardinality of each of the following sets?</p>
 <ol class="lower-alpha">
-<li id="li-21"><p id="p-96">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
-<li id="li-22"><p id="p-97">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
-<li id="li-23"><p id="p-98">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
-<li id="li-24"><p id="p-99">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
+<li id="li-29"><p id="p-137">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
+<li id="li-30"><p id="p-138">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
+<li id="li-31"><p id="p-139">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
+<li id="li-32"><p id="p-140">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-100">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
+<p id="p-141">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
 <div class="displaymath">
 \begin{align*}
 S &amp;= \{1,2,3,4,5,6,7\}\\
@@ -138,11 +355,11 @@ C &amp;= \{2,4,6,7\}
 </div>
 <p data-braille="continuation">Find each of the following. Drawing a Venn diagram will help!</p>
 <ol class="lower-alpha">
-<li id="li-25"><p id="p-101">\(\displaystyle A\cup B\)</p></li>
-<li id="li-26"><p id="p-102">\(\displaystyle (A\cup B)\cap C\)</p></li>
-<li id="li-27"><p id="p-103">\(\displaystyle C^C \cup B\)</p></li>
-<li id="li-28"><p id="p-104">\(\displaystyle (A\cap B)^C\)</p></li>
-<li id="li-29"><p id="p-105">\(\displaystyle C\setminus B\)</p></li>
+<li id="li-33"><p id="p-142">\(\displaystyle A\cup B\)</p></li>
+<li id="li-34"><p id="p-143">\(\displaystyle (A\cup B)\cap C\)</p></li>
+<li id="li-35"><p id="p-144">\(\displaystyle C^C \cup B\)</p></li>
+<li id="li-36"><p id="p-145">\(\displaystyle (A\cap B)^C\)</p></li>
+<li id="li-37"><p id="p-146">\(\displaystyle C\setminus B\)</p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>
