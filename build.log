@@ -1,3 +1,29 @@
 Messages from application of C:\Users\msalo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\pretext\static\xsl\pretext-html.xsl:
-PTX:ERROR:   a cross-reference ("xref") uses references [thm_demorgan] that do not point to any target.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source.  Your output will contain some placeholder text that you will not want to distribute to your readers.
-             located within: "rem_conditional1" (xml:id)
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)
+MBX:WARNING: could not translate string with id "equation" into language for code "en-US"
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)
+MBX:WARNING: could not translate string with id "equation" into language for code "en-US"
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)
+MBX:WARNING: could not translate string with id "equation" into language for code "en-US"
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)
+MBX:WARNING: could not translate string with id "equation" into language for code "en-US"
+PTX:ERROR:   An object (equation) lacks a serial number, search output for "[NUM]"
+             located within: "eq_threenorm" (xml:id)
+PTX:ERROR:   An object (equation) lacks a structure number, search output for "[STRUCT]"
+             located within: "eq_threenorm" (xml:id)

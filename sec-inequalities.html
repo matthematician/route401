@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-09T22:49:52-05:00       *-->
+<!--*       on 2021-01-10T17:10:15-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -97,7 +97,11 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li class="link active">
-<a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul><li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li></ul>
+<a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul>
+<li><a href="sec-inequalities.html#ss-inequalities" data-scroll="ss-inequalities">Inequalities</a></li>
+<li><a href="sec-inequalities.html#ss-absolutevalue" data-scroll="ss-absolutevalue">Absolute Value</a></li>
+<li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="sec-limits.html" data-scroll="sec-limits"><span class="codenumber">4</span> <span class="title">Limits and Sequences</span></a><ul><li><a href="sec-limits.html#ws-limits" data-scroll="ws-limits">Limits and Sequences Workbook</a></li></ul>
@@ -108,40 +112,170 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-inequalities"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span>
 </h2>
-<section class="worksheet" id="ws-inequalities"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">3.1</span> <span class="title">Inequalities and Absolute Value Workbook</span>
+<section class="subsection" id="ss-inequalities"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">Inequalities</span>
+</h3>
+<p id="p-149">Inequalities are a crucial tool for studying the real numbers. And even for constructing them in the first place! For example, even if we do not yet know that there is a <em class="emphasis">real</em> number called “square-root-of-two”, we <em class="emphasis">do</em> know that we can define a subset of <em class="emphasis">rational</em> numbers consisting of all those whose square is <em class="emphasis">less than</em> two:</p>
+<div class="displaymath">
+\begin{equation*}
+A = \bigl\{ x\in \mathbb{Q} \colon x^2 \lt 2 \bigr\}.
+\end{equation*}
+</div>
+<p data-braille="continuation">While this set doesn't have a maximum (greatest element), we get the sense that <em class="emphasis">if it did</em>, that greatest element would be the number we should call \(\sqrt{2}\text{.}\)</p>
+<p id="p-150">Sets like the one above <a class="external" href="https://mathworld.wolfram.com/DedekindCut.html" target="_blank">can be used to construct</a> the real numbers. Then, once we've done so, we see they are part of the important class of subsets of the real numbers called intervals.</p>
+<article class="definition definition-like" id="def_interval"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Interval.</span>
+</h6>
+<p id="p-151">A subset \(I\subseteq\mathbb{R}\) is called an <dfn class="terminology">interval</dfn> if, for all \(x,y,z\in\mathbb{R}\) with \(x \leq y \leq z\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\text{If }x,z\in I \text{ then }y\in I.
+\end{equation*}
+</div>
+<p data-braille="continuation">If an interval has finite upper and lower bounds \(a,b\in\mathbb{R}\) respectively, we use one of the following notations for it:</p>
+<figure class="figure figure-like" id="fig_interval"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="https://mathworld.wolfram.com/images/eps-gif/Interval_1000.gif" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2<span class="period">.</span></span><span class="space"> </span>Notations for intervals with endpoints \(a,b\text{.}\) Source: <a class="external" href="http://mathworld.wolfram.com/interval.html" target="_blank">MathWorld</a></figcaption></figure></article><p id="p-152">Intuitively, an interval is a subset of the real numbers that has “no gaps” in it. Often, we define functions on domains made of unions of intervals, on each of which the function's definition may be different. These are called piecewise functions.</p>
+<article class="remark remark-like" id="rem_piecewise"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
+</h6>
+<p id="p-153">Graph the piecewise function \(f(x) = \begin{cases}-2x &amp;,\text{ when } x\lt 2\\ x^2+1 &amp;,\text{ when }x\geq 2\end{cases}\text{.}\)</p>
+<p id="p-154">On the interval \(I_1 = (-\infty,2)\text{,}\) the function has definition \(f(x)=-2x\text{:}\)</p>
+<figure class="figure figure-like" id="fig_piecewise1"><iframe src="https://www.desmos.com/calculator/ai2ztukfvl" id="interactive-1" width="480" height="270"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4<span class="period">.</span></span><span class="space"> </span>A graph of \(f(x)\) restricted to \(I_1=(-\infty,2)\)</figcaption></figure><p id="p-155">On the interval \(I_2 = [2,\infty)\text{,}\) the function has definition \(f(x)=x^2+1\text{:}\)</p>
+<figure class="figure figure-like" id="fig_piecewise2"><iframe src="https://www.desmos.com/calculator/may7dipnxx" id="interactive-2" width="480" height="270"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5<span class="period">.</span></span><span class="space"> </span>A graph of \(f(x)\) restricted to \(I_2=[2,\infty)\)</figcaption></figure><p id="p-156">Putting both pieces on the same graph, and using carefully an open circle to depict a point where this graph is <em class="emphasis">not</em>, we get the completed graph of \(f\text{:}\)</p>
+<figure class="figure figure-like" id="fig_piecewise"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/piecewise.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6<span class="period">.</span></span><span class="space"> </span>A graph of the piecewise function \(f(x)\text{.}\)</figcaption></figure></article></section><section class="subsection" id="ss-absolutevalue"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2</span> <span class="title">Absolute Value</span>
+</h3>
+<p id="p-157">Whenever we have an “origin” in mathematics, it's often helpful to be able to measure our <em class="emphasis">distance</em> to that origin. In vector spaces like \(\mathbb{R}^3\text{,}\) we can measure the distance to the origin \((0,0,0)\) using a <dfn class="terminology">norm</dfn> function such as the one that measures straight-line (Euclidean) distance:</p>
+<div class="displaymath">
+\begin{gather}
+\bigl\| (x,y,z) \bigr\| = \sqrt{ x^2+y^2+z^2 }.\label{eq_threenorm}\tag{3.1}
+\end{gather}
+</div>
+<p id="p-158">We won't need so many dimensions to study real analysis (at least, not in the first semester). We only need one: a single real number \(x\in \mathbb{R}^1\text{,}\) and a norm which we denote with the single bar \(|x|\text{.}\) Equation <a class="xref" data-knowl="./knowl/eq_threenorm.html" title="Equation 3.1">(3.1)</a> simplifies into a definition that we call the absolute value of \(x\text{,}\) as follows.</p>
+<article class="definition definition-like" id="def_absolutevalue"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute Value.</span>
+</h6>
+<p id="p-159">Let \(x\in \mathbb{R}\) be a real number. The <dfn class="terminology">absolute value</dfn> of \(x\) is denoted by \(|x|\text{,}\) and is defined by</p>
+<div class="displaymath">
+\begin{align}
+|x| = \sqrt{\, x^2\, } = \begin{cases} -x&amp;\text{ when }x\lt 0\\ x&amp;\text{ when }x \geq 0\end{cases}\label{eq_absolutevalue}\tag{3.2}
+\end{align}
+</div></article><p id="p-160">Intuitively, we may think of \(|x|\) as “the nonnegative version of \(x\)”. It may help in Equation <a class="xref" data-knowl="./knowl/eq_absolutevalue.html" title="Equation 3.2">(3.2)</a> to read \(-x\) as “the opposite of \(x\)” to remind yourself why this is.</p>
+<p id="p-161">The following properties apply to absolute values of real numbers. (In fact, all but <a class="xref" data-knowl="./knowl/eq_abseq.html" title="Equation 3.6">(3.6)</a> are properties of “norm functions” in general, wherever they are defined.)</p>
+<article class="theorem theorem-like" id="thm_absproperties"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Absolute Value.</span>
+</h6>
+<p id="p-162">Let \(a,b\in\mathbb{R}\) be real numbers, and let \(c\geq 0\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align}
+|a| &amp;\geq 0 &amp;&amp; \textsf{(Positivity)}\tag{3.3}\\
+|a| &amp;= 0 \text{ if and only if }a=0 &amp;&amp; \textsf{(Nondegeneracy)}\tag{3.4}\\
+|ab| &amp;= |a|\cdot |b| &amp;&amp; \textsf{(Homogeneity)}\label{eq_homogeneity}\tag{3.5}\\
+|a| &amp;\leq c \text{ if and only if }-c \leq a \leq c \label{eq_abseq}\tag{3.6}\\
+|a+b| &amp;\leq |a| + |b| &amp;&amp; \textsf{(Triangle inequality)}\label{eq_triangle}\tag{3.7}
+\end{align}
+</div></article><p id="p-163">A special case of Equation <a class="xref" data-knowl="./knowl/eq_homogeneity.html" title="Equation 3.5">(3.5)</a> is that \(|-a| = |a|\text{,}\) just by taking \(b=-1\text{.}\)</p>
+<p id="p-164">The triangle inequality, Equation <a class="xref" data-knowl="./knowl/eq_triangle.html" title="Equation 3.7">(3.7)</a>, is one of the most valuable tools (without exaggeration -- you will use it all the time) in real analysis. It has several corollaries and alternative forms that can be used as well.</p>
+<article class="corollary theorem-like" id="cor_triangle"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Triangle Inequalities.</span>
+</h6>
+<p id="p-165">Let \(a,b\in\mathbb{R}\) be real numbers. Then</p>
+<div class="displaymath">
+\begin{align}
+|a+b| &amp;\leq |a|+|b| &amp;&amp; \textsf{(Triangle inequality)}\tag{3.8}\\
+|a-b| &amp;\geq \biggl| \,|a| - |b|\, \biggr| &amp;&amp; \textsf{(Reverse triangle inequality)}\tag{3.9}\\
+|a|-|b| \leq |a+b| &amp;\leq |a|+|b|\tag{3.10}
+\end{align}
+</div>
+<p id="p-166">Furthermore, for any natural number \(n\geq 2\) and real numbers \(a_1,a_2,a_3,\ldots,a_n\in\mathbb{R}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\bigl|a_1+a_2+a_3+\cdots+a_n\bigr| \leq |a_1|+|a_2|+|a_3|+\cdots+|a_n|.
+\end{equation*}
+</div></article><article class="definition definition-like" id="def_increasing"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Increasing and Decreasing Functions.</span>
+</h6>
+<p id="p-167">Let \(f\colon \mathbb{R}\to\mathbb{R}\) be a function.</p>
+<p id="p-168">We call \(f\) an <dfn class="terminology">increasing function</dfn> if it preserves the sense of inequalities. That is,</p>
+<div class="displaymath">
+\begin{gather}
+\text{For all }x,y\in\mathbb{R}\text{, if } x \leq y \text{ then } f(x) \leq f(y).\label{eq_inc}\tag{3.11}
+\end{gather}
+</div>
+<p id="p-169">We call \(f\) a <dfn class="terminology">decreasing function</dfn> if it reverses the sense of inequalities. That is,</p>
+<div class="displaymath">
+\begin{gather}
+\text{For all }x,y\in\mathbb{R}\text{, if } x \leq y \text{ then } f(x) \geq f(y).\label{eq_dec}\tag{3.12}
+\end{gather}
+</div></article><p id="p-170">When we solve an inequality, at each step we're applying a (one-to-one) function to both sides. So, <a class="xref" data-knowl="./knowl/def_increasing.html" title="Definition 3.10: Increasing and Decreasing Functions">Definition 3.10</a> is critical to remember since it tells us whether we need to <em class="emphasis">keep</em> the inequality sign as it is (if the function we applied is increasing), or <em class="emphasis">flip</em> the inequality sign (if the function we applied is decreasing). The following two examples show how we can keep track.</p>
+<article class="remark remark-like" id="rem_ineq1"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span>
+</h6>
+<p id="p-171">Solve the inequality \(\bigl|2x+4\bigr| \lt 3\text{.}\)</p>
+<p id="p-172">Step by step, here is a solution method:</p>
+<div class="displaymath">
+\begin{align*}
+&amp;|2x+4| \lt 3 &amp;&amp; \\
+-3\lt{} &amp; 2x+4 \lt  3 &amp;&amp; \knowl{./knowl/eq_abseq.html}{\text{(3.6)}}\\
+-7 \lt{} &amp; 2x \lt -1 &amp;&amp; \text{Via }f(x)=x-4\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}\\
+-\frac72 \lt{} &amp; x \lt -\frac12 &amp;&amp; \text{Via }f(x)=x/2\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}
+\end{align*}
+</div>
+<p id="p-173">According to <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">Definition 3.1</a> we can express our answer as the open interval \(\left(-\frac72,-\frac12\right)\text{.}\)</p></article><article class="remark remark-like" id="rem_ineq2"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span>
+</h6>
+<p id="p-174">Solve the inequality \(\displaystyle\frac{1}{6x-2x^2} \leq \displaystyle-\frac{1}{20}\text{.}\)</p>
+<p id="p-175">Step by step, here is a solution method. Pay careful attention to when and why the inequality sign switches!</p>
+<div class="displaymath">
+\begin{align*}
+\displaystyle\frac{1}{6x-2x^2} &amp;\leq \displaystyle-\frac{1}{20} &amp;&amp; \\
+6x-2x^2 &amp;\geq -20 &amp;&amp; \text{Via }f(x)=1/x\text{, decreasing }\knowl{./knowl/eq_dec.html}{\text{(3.12)}}\\
+20+6x-2x^2 &amp;\geq 0 &amp;&amp; \text{Via }f(x)=x-20\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}\\
+x^2-3x-10 &amp;\leq 0 &amp;&amp; \text{Via }f(x)=-\frac12 x\text{, decreasing }\knowl{./knowl/eq_dec.html}{\text{(3.12)}}\\
+\left(x-\frac32\right)^2 - \frac{49}{4} &amp;\leq 0 &amp;&amp; \text{Completing the square}\\
+\left(x-\frac32\right)^2 &amp;\leq \frac{49}{4} &amp;&amp; \text{Via }f(x)=x+49/4\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}\\
+\sqrt{\left(x-\frac32\right)^2} &amp;\leq \frac{7}{2} &amp;&amp; \text{Via }f(x)=\sqrt{x}\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}\\
+\left|x-\frac32 \right| &amp; \leq \frac72 &amp;&amp; \knowl{./knowl/def_absolutevalue.html}{\text{Definition 3.7}}\\
+-\frac72 \leq x-\frac32 &amp;{} \leq \frac72 &amp;&amp; \text{By }\knowl{./knowl/eq_abseq.html}{\text{(3.6)}}\\
+-2 \leq{} x  &amp;{}\leq 5 &amp;&amp; \text{Via }f(x)=x+\frac32\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}
+\end{align*}
+</div>
+<p id="p-176">So <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">interval notation</a> for the solution set of this inequality would be \([-2,5]\text{.}\)</p></article></section><section class="worksheet" id="ws-inequalities"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">3.3</span> <span class="title">Inequalities and Absolute Value Workbook</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-149">Use the property</p>
+<p id="p-177">Prove that for all \(a,x\in\mathbb{R}\text{,}\) we have \(|x|\leq a\) if and only if \(-a \leq x \leq a\text{.}\)</p></article><p id="p-178"><em class="emphasis">Use the above theorem to solve #2-4.</em></p>
+<article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-179">If the distance between \(x\) and \(7\) is less than or equal to \(3\text{,}\) what are the possible outcomes for \(x\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-180">Find all \(x\in\mathbb{R}\) so that \(\bigl|4x-11\bigr|\leq 10\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-181">Find all \(x\in \mathbb{R}\) so that \(\bigl|9x+2\bigr| \leq 2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-182">Use the property</p>
 <div class="displaymath">
 \begin{equation*}
 \text{If } c\geq 0, \text{ then } |a|\leq c \text{ if and only if } -a \leq c \leq a
 \end{equation*}
 </div>
-<p data-braille="continuation">to solve the inequality \(|a|\leq 5\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-150">If the distance between \(x\) and \(7\) is less than or equal to \(3\text{,}\) what are the possible outcomes for \(x\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-151">Use the triangle inequality to prove: For all \(a,b\in\mathbb{R}\text{,}\) we have</p>
-<div class="displaymath">
-\begin{equation*}
-|a|-|b| \leq |a+b| \leq |a|+|b|.
-\end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-152">Prove that for all \(a,x\in\mathbb{R}\text{,}\) we have \(|x|\leq a\) if and only if \(-a \leq x \leq a\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-153">Find all \(x\in\mathbb{R}\) so that \(\bigl|4x-11\bigr|\leq 10\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-154">Find all \(x\in \mathbb{R}\) so that \(\bigl|9x+2\bigr| \leq 2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-155">Use the triangle inequality to prove that for all \(a,b,c\in\mathbb{R}\text{,}\)</p>
+<p data-braille="continuation">to solve the inequality \(|a|\leq 5\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-183">Use the triangle inequality to prove that for all \(a,b,c\in\mathbb{R}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \bigl|a+b+c\bigr| \leq |a|+|b|+|c|.
 \end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-184">Use the triangle inequality to prove: For all \(a,b\in\mathbb{R}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+|a|-|b| \leq |a+b| \leq |a|+|b|.
+\end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-156">Prove by induction that, for all \(n\geq 2\text{,}\) if \(a_1,a_2,a_3,\ldots,a_n\in\mathbb{R}\text{,}\) then</p>
+<p id="p-185">Prove by induction that, for all \(n\geq 2\text{,}\) if \(a_1,a_2,a_3,\ldots,a_n\in\mathbb{R}\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \bigl|a_1+a_2+a_3+\cdots+a_n\bigr| \leq |a_1| + |a_2| + |a_3| + \cdots + |a_n|.
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-157">Graph the piecewise function \(f(x) = \begin{cases} x^2+1 &amp; \text{when }x\lt 0\\ \frac12 x + 3 &amp; \text{when }x \geq 0\end{cases}\text{.}\)</p></article></section></section></div></main>
+<p id="p-186">Graph the piecewise function \(f(x) = \begin{cases} x^2+1 &amp; \text{when }x\lt 0\\ \frac12 x + 3 &amp; \text{when }x \geq 0\end{cases}\text{.}\)</p></article></section></section></div></main>
 </div>
 </body>
 </html>
