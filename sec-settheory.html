@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-09T22:44:23-05:00       *-->
+<!--*       on 2021-01-09T22:49:52-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -331,20 +331,37 @@ A=\bigl\{ x\in S \colon P(x) \bigr\}.
 <p id="p-131">For three sets \(A,B,C\text{,}\) the set \((A\cap B)\cap C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="p-132">Let \(A\) and \(B\) be sets. Prove that if \(A\cup B = \emptyset\text{,}\) then \(A=\emptyset\) and \(B=\emptyset\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-133">Try a proof by contrapositive.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-133">Try a <a class="xref" data-knowl="./knowl/def_contraproof.html" title="Definition 1.17: Proof by Contrapositive">proof by contrapositive</a>.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-134">Use an element argument to prove <a class="xref" data-knowl="./knowl/thm_demorgan_sets.html" title="Theorem 2.13: De Morgan's Laws for Sets">DeMorgan's Laws for Sets</a>.</p>
+<p id="p-134">Prove <a class="xref" data-knowl="./knowl/thm_demorgan_sets.html" title="Theorem 2.13: De Morgan's Laws for Sets">DeMorgan's Laws for Sets</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-135">Apply the logical version of <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-135">Use an <a class="xref" data-knowl="./knowl/def_subsetproof.html" title="Definition 2.20: Proving subset (“Element argument”)">element argument</a> and establish <a class="xref" data-knowl="./knowl/def_equalityproof.html" title="Definition 2.21: Proving set equality">both subset inclusions</a> for each. You'll need to apply the logical version of <a class="xref" data-knowl="./knowl/thm_demorgan.html" title="Theorem A.6: De Morgan's Laws">De Morgan's Laws</a>.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-136">What is the cardinality of each of the following sets?</p>
+<p id="p-136">Let \(A,B,C\) be three sets. Prove the distributive law for unions over intersections:</p>
+<div class="displaymath">
+\begin{equation*}
+A\cup(B\cap C) = (A\cup B) \cap (A\cup C).
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like">
+<p id="p-137">Use an <a class="xref" data-knowl="./knowl/def_subsetproof.html" title="Definition 2.20: Proving subset (“Element argument”)">element argument</a> and establish <a class="xref" data-knowl="./knowl/def_equalityproof.html" title="Definition 2.21: Proving set equality">both subset inclusions</a>. This means proving both:</p>
+<div class="displaymath">
+\begin{align*}
+\forall x\in A\cup(B\cap C), &amp; \text{ we have } x\in (A\cup B)\cap (A\cup C) &amp;\text{ and }\\
+\forall x\in (A\cup B)\cap (A\cup C), &amp; \text{ we have } x\in A\cup (B\cap C).
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-138">What is the cardinality of each of the following sets?</p>
 <ol class="lower-alpha">
-<li id="li-29"><p id="p-137">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
-<li id="li-30"><p id="p-138">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
-<li id="li-31"><p id="p-139">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
-<li id="li-32"><p id="p-140">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-141">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
+<li id="li-29"><p id="p-139">\(\displaystyle A=\{0,2,4,6,8,\ldots,24\}\)</p></li>
+<li id="li-30"><p id="p-140">\(\displaystyle B = \bigl\{ \emptyset \bigr\}\)</p></li>
+<li id="li-31"><p id="p-141">\(\displaystyle C=\bigl\{ \, \{1,2,3\}, \{4,5,6\} \, \bigr\}\)</p></li>
+<li id="li-32"><p id="p-142">\(P(K)\text{,}\) with \(K = \{a,b,c\}\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-143">Let \(S\) be the universe where \(A,B,C\subseteq S\text{.}\) Let</p>
 <div class="displaymath">
 \begin{align*}
 S &amp;= \{1,2,3,4,5,6,7\}\\
@@ -355,11 +372,11 @@ C &amp;= \{2,4,6,7\}
 </div>
 <p data-braille="continuation">Find each of the following. Drawing a Venn diagram will help!</p>
 <ol class="lower-alpha">
-<li id="li-33"><p id="p-142">\(\displaystyle A\cup B\)</p></li>
-<li id="li-34"><p id="p-143">\(\displaystyle (A\cup B)\cap C\)</p></li>
-<li id="li-35"><p id="p-144">\(\displaystyle C^C \cup B\)</p></li>
-<li id="li-36"><p id="p-145">\(\displaystyle (A\cap B)^C\)</p></li>
-<li id="li-37"><p id="p-146">\(\displaystyle C\setminus B\)</p></li>
+<li id="li-33"><p id="p-144">\(\displaystyle A\cup B\)</p></li>
+<li id="li-34"><p id="p-145">\(\displaystyle (A\cup B)\cap C\)</p></li>
+<li id="li-35"><p id="p-146">\(\displaystyle C^C \cup B\)</p></li>
+<li id="li-36"><p id="p-147">\(\displaystyle (A\cap B)^C\)</p></li>
+<li id="li-37"><p id="p-148">\(\displaystyle C\setminus B\)</p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>
