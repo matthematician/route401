@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-10T17:10:15-05:00       *-->
+<!--*       on 2021-01-10T21:53:38-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -100,6 +100,7 @@ MathJax.Hub.Config({
 <a href="sec-inequalities.html" data-scroll="sec-inequalities"><span class="codenumber">3</span> <span class="title">Inequalities and Absolute Value</span></a><ul>
 <li><a href="sec-inequalities.html#ss-inequalities" data-scroll="ss-inequalities">Inequalities</a></li>
 <li><a href="sec-inequalities.html#ss-absolutevalue" data-scroll="ss-absolutevalue">Absolute Value</a></li>
+<li><a href="sec-inequalities.html#ss_solvingineq" data-scroll="ss_solvingineq">Solving Inequalities</a></li>
 <li><a href="sec-inequalities.html#ws-inequalities" data-scroll="ws-inequalities">Inequalities and Absolute Value Workbook</a></li>
 </ul>
 </li>
@@ -193,27 +194,48 @@ A = \bigl\{ x\in \mathbb{Q} \colon x^2 \lt 2 \bigr\}.
 \begin{equation*}
 \bigl|a_1+a_2+a_3+\cdots+a_n\bigr| \leq |a_1|+|a_2|+|a_3|+\cdots+|a_n|.
 \end{equation*}
-</div></article><article class="definition definition-like" id="def_increasing"><h6 class="heading">
+</div></article></section><section class="subsection" id="ss_solvingineq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3</span> <span class="title">Solving Inequalities</span>
+</h3>
+<p id="p-167">Many real analysis students find that solving an <em class="emphasis">inequality</em>, as opposed to solving an equation, is an essential skill that they haven't had enough practice doing. There are several different approaches to solving inequalities, especially when they involve absolute values as they will in our course; another approach might be to <a class="external" href="https://spot.pcc.edu/math/orcca/ed2/html/section-inequalities-graphically.html" target="_blank">solve them graphically</a>.</p>
+<p id="p-168">We'll focus on how to solve inequalities by applying at each step a (one-to-one) function to each side. For example, we want to think of the step</p>
+<div class="displaymath">
+\begin{align*}
+19x-12 &amp;\lt 45\\
+\color{cyan}{+12}&amp; \;\; \color{cyan}{+12} &amp;&amp; \text{"add 12 to both sides"}\\
+19x &amp;\lt 57
+\end{align*}
+</div>
+<p data-braille="continuation">as, instead, the application of the function \(f(x)=x+12\) to both sides:</p>
+<div class="displaymath">
+\begin{align*}
+19x-12 &amp;\lt 45\\
+\color{cyan}{f({}}19x-12\color{cyan}{{})} &amp; \;\; \color{cyan}{f({}} 45 \color{cyan}{{})} &amp;&amp; \text{"Apply }f(x)=x+12\text{ to both sides"}\\
+19x &amp;\lt 57. 
+\end{align*}
+</div>
+<p data-braille="continuation">This is useful because it reminds us which steps reverse the inequality sign, as follows.</p>
+<article class="definition definition-like" id="def_increasing"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Increasing and Decreasing Functions.</span>
 </h6>
-<p id="p-167">Let \(f\colon \mathbb{R}\to\mathbb{R}\) be a function.</p>
-<p id="p-168">We call \(f\) an <dfn class="terminology">increasing function</dfn> if it preserves the sense of inequalities. That is,</p>
+<p id="p-169">Let \(f\colon \mathbb{R}\to\mathbb{R}\) be a function.</p>
+<p id="p-170">We call \(f\) an <dfn class="terminology">increasing function</dfn> if it preserves the sense of inequalities. That is,</p>
 <div class="displaymath">
 \begin{gather}
 \text{For all }x,y\in\mathbb{R}\text{, if } x \leq y \text{ then } f(x) \leq f(y).\label{eq_inc}\tag{3.11}
 \end{gather}
 </div>
-<p id="p-169">We call \(f\) a <dfn class="terminology">decreasing function</dfn> if it reverses the sense of inequalities. That is,</p>
+<p id="p-171">We call \(f\) a <dfn class="terminology">decreasing function</dfn> if it reverses the sense of inequalities. That is,</p>
 <div class="displaymath">
 \begin{gather}
 \text{For all }x,y\in\mathbb{R}\text{, if } x \leq y \text{ then } f(x) \geq f(y).\label{eq_dec}\tag{3.12}
 \end{gather}
-</div></article><p id="p-170">When we solve an inequality, at each step we're applying a (one-to-one) function to both sides. So, <a class="xref" data-knowl="./knowl/def_increasing.html" title="Definition 3.10: Increasing and Decreasing Functions">Definition 3.10</a> is critical to remember since it tells us whether we need to <em class="emphasis">keep</em> the inequality sign as it is (if the function we applied is increasing), or <em class="emphasis">flip</em> the inequality sign (if the function we applied is decreasing). The following two examples show how we can keep track.</p>
+</div></article><p id="p-172">When we solve an inequality, at each step we're applying a (one-to-one) function to both sides. So, <a class="xref" data-knowl="./knowl/def_increasing.html" title="Definition 3.10: Increasing and Decreasing Functions">Definition 3.10</a> is critical to remember since it tells us whether we need to <em class="emphasis">keep</em> the inequality sign as it is (if the function we applied is increasing), or <em class="emphasis">flip</em> the inequality sign (if the function we applied is decreasing). The following two examples show how we can keep track.</p>
 <article class="remark remark-like" id="rem_ineq1"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span>
 </h6>
-<p id="p-171">Solve the inequality \(\bigl|2x+4\bigr| \lt 3\text{.}\)</p>
-<p id="p-172">Step by step, here is a solution method:</p>
+<p id="p-173">Solve the inequality \(\bigl|2x+4\bigr| \lt 3\text{.}\)</p>
+<p id="p-174">Step by step, here is a solution method:</p>
 <div class="displaymath">
 \begin{align*}
 &amp;|2x+4| \lt 3 &amp;&amp; \\
@@ -222,11 +244,11 @@ A = \bigl\{ x\in \mathbb{Q} \colon x^2 \lt 2 \bigr\}.
 -\frac72 \lt{} &amp; x \lt -\frac12 &amp;&amp; \text{Via }f(x)=x/2\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}
 \end{align*}
 </div>
-<p id="p-173">According to <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">Definition 3.1</a> we can express our answer as the open interval \(\left(-\frac72,-\frac12\right)\text{.}\)</p></article><article class="remark remark-like" id="rem_ineq2"><h6 class="heading">
+<p id="p-175">According to <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">Definition 3.1</a> we can express our answer as the open interval \(\left(-\frac72,-\frac12\right)\text{.}\)</p></article><article class="remark remark-like" id="rem_ineq2"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span>
 </h6>
-<p id="p-174">Solve the inequality \(\displaystyle\frac{1}{6x-2x^2} \leq \displaystyle-\frac{1}{20}\text{.}\)</p>
-<p id="p-175">Step by step, here is a solution method. Pay careful attention to when and why the inequality sign switches!</p>
+<p id="p-176">Solve the inequality \(\displaystyle\frac{1}{6x-2x^2} \leq \displaystyle-\frac{1}{20}\text{.}\)</p>
+<p id="p-177">Step by step, here is a solution method. Pay careful attention to when and why the inequality sign switches!</p>
 <div class="displaymath">
 \begin{align*}
 \displaystyle\frac{1}{6x-2x^2} &amp;\leq \displaystyle-\frac{1}{20} &amp;&amp; \\
@@ -241,41 +263,41 @@ x^2-3x-10 &amp;\leq 0 &amp;&amp; \text{Via }f(x)=-\frac12 x\text{, decreasing }\
 -2 \leq{} x  &amp;{}\leq 5 &amp;&amp; \text{Via }f(x)=x+\frac32\text{, increasing }\knowl{./knowl/eq_inc.html}{\text{(3.11)}}
 \end{align*}
 </div>
-<p id="p-176">So <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">interval notation</a> for the solution set of this inequality would be \([-2,5]\text{.}\)</p></article></section><section class="worksheet" id="ws-inequalities"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">3.3</span> <span class="title">Inequalities and Absolute Value Workbook</span>
+<p id="p-178">So <a class="xref" data-knowl="./knowl/def_interval.html" title="Definition 3.1: Interval">interval notation</a> for the solution set of this inequality would be \([-2,5]\text{.}\)</p></article></section><section class="worksheet" id="ws-inequalities"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">3.4</span> <span class="title">Inequalities and Absolute Value Workbook</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-177">Prove that for all \(a,x\in\mathbb{R}\text{,}\) we have \(|x|\leq a\) if and only if \(-a \leq x \leq a\text{.}\)</p></article><p id="p-178"><em class="emphasis">Use the above theorem to solve #2-4.</em></p>
+<p id="p-179">Prove that for all \(a,x\in\mathbb{R}\text{,}\) we have \(|x|\leq a\) if and only if \(-a \leq x \leq a\text{.}\)</p></article><p id="p-180"><em class="emphasis">Use the above theorem to solve #2-4.</em></p>
 <article class="exercise exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-179">If the distance between \(x\) and \(7\) is less than or equal to \(3\text{,}\) what are the possible outcomes for \(x\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-180">Find all \(x\in\mathbb{R}\) so that \(\bigl|4x-11\bigr|\leq 10\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-181">Find all \(x\in \mathbb{R}\) so that \(\bigl|9x+2\bigr| \leq 2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-182">Use the property</p>
+<p id="p-181">If the distance between \(x\) and \(7\) is less than or equal to \(3\text{,}\) what are the possible outcomes for \(x\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-182">Find all \(x\in\mathbb{R}\) so that \(\bigl|4x-11\bigr|\leq 10\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-183">Find all \(x\in \mathbb{R}\) so that \(\bigl|9x+2\bigr| \leq 2\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-184">Use the property</p>
 <div class="displaymath">
 \begin{equation*}
 \text{If } c\geq 0, \text{ then } |a|\leq c \text{ if and only if } -a \leq c \leq a
 \end{equation*}
 </div>
 <p data-braille="continuation">to solve the inequality \(|a|\leq 5\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-183">Use the triangle inequality to prove that for all \(a,b,c\in\mathbb{R}\text{,}\)</p>
+<p id="p-185">Use the triangle inequality to prove that for all \(a,b,c\in\mathbb{R}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \bigl|a+b+c\bigr| \leq |a|+|b|+|c|.
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-184">Use the triangle inequality to prove: For all \(a,b\in\mathbb{R}\text{,}\) we have</p>
+<p id="p-186">Use the triangle inequality to prove: For all \(a,b\in\mathbb{R}\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 |a|-|b| \leq |a+b| \leq |a|+|b|.
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-185">Prove by induction that, for all \(n\geq 2\text{,}\) if \(a_1,a_2,a_3,\ldots,a_n\in\mathbb{R}\text{,}\) then</p>
+<p id="p-187">Prove by induction that, for all \(n\geq 2\text{,}\) if \(a_1,a_2,a_3,\ldots,a_n\in\mathbb{R}\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \bigl|a_1+a_2+a_3+\cdots+a_n\bigr| \leq |a_1| + |a_2| + |a_3| + \cdots + |a_n|.
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-186">Graph the piecewise function \(f(x) = \begin{cases} x^2+1 &amp; \text{when }x\lt 0\\ \frac12 x + 3 &amp; \text{when }x \geq 0\end{cases}\text{.}\)</p></article></section></section></div></main>
+<p id="p-188">Graph the piecewise function \(f(x) = \begin{cases} x^2+1 &amp; \text{when }x\lt 0\\ \frac12 x + 3 &amp; \text{when }x \geq 0\end{cases}\text{.}\)</p></article></section></section></div></main>
 </div>
 </body>
 </html>
