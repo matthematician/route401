@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-10T21:53:39-05:00       *-->
+<!--*       on 2021-01-11T00:27:53-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">These definitions are typically introduced in introductory courses on proofs, discrete math, and number theory. They are useful for completing the proof exercises in this workbook and valuable for any aspiring mathematician to remember. However, memorizing these definitions is <em class="emphasis">not</em> as important for your success in real analysis as is knowing how to <em class="emphasis">use</em> definitions in proofs (both direct and indirect proofs). So, you may want to focus more on applying these definitions than on memorizing them!</p>
-<span class="incontext"><a href="sec-definitions.html#p-207">in-context</a></span>
+<p>Let \(f,g\colon \mathbb{R}\to\mathbb{R}\) be two functions which are differentiable at \(x=a\text{.}\) If</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lim_{x\to a} f(x) = 0 = \lim_{x\to a} g(x),
+\end{equation*}
+</div>
+<p data-braille="continuation">then the limit of their quotient is the limit of their derivatives' quotient:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather}
+\lim_{x\to a}\frac{f(x)}{g(x)} = \lim_{x\to a}\frac{f'(x)}{g'(x)}.\tag{4.2}
+\end{gather}
+</div>
+<p data-braille="continuation">If there exists a real number \(B\) such that \(f,g\) are differentiable for all \(x\geq B\text{,}\) then <a class="xref" data-knowl="./knowl/eq_lhopital.html" title="Equation 4.2">(4.2)</a> may be applied to the limit toward \(a=\infty\text{.}\)</p>
+<span class="incontext"><a href="sec-limits.html#p-207">in-context</a></span>
 </body>
 </html>
